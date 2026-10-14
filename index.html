@@ -1,0 +1,288 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades HTML - Material 4</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f2f5f9;
+            color: #263238;
+            line-height: 1.6;
+        }
+
+        header, footer {
+            background-color: #243b55;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #141e30;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #243b55;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            width: auto;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 20px;
+            background-color: #243b55;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .imagens {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .imagens img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .pagina {
+            border-top: 2px solid #dbe3ec;
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .imagens {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ATIVIDADE 1 - MATERIAL 4-19 -->
+    <header id="inicio">
+        <h1>Atividades de HTML - Material 4</h1>
+        <p>Praticando a estrutura de páginas e formulários</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Atividade 1 - Estrutura da página</h2>
+            <p>Esta página utiliza as tags header, main e footer.</p>
+            <ul>
+                <li><strong>Header:</strong> contém o título da página.</li>
+                <li><strong>Main:</strong> contém o conteúdo principal.</li>
+                <li><strong>Footer:</strong> contém o copyright.</li>
+            </ul>
+        </section>
+
+        <!-- ATIVIDADE 2 - MATERIAL 4-30 -->
+        <section>
+            <h2>Atividade 2 - Formulário completo</h2>
+
+            <form>
+                <label for="nome2">Nome:</label>
+                <input type="text" id="nome2" name="nome" required>
+
+                <label for="email2">E-mail:</label>
+                <input type="email" id="email2" name="email" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+
+                <p>Gênero:</p>
+                <label>
+                    <input type="radio" name="genero" value="feminino">
+                    Feminino
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="masculino">
+                    Masculino
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="outro">
+                    Outro
+                </label>
+
+                <label for="cidade">Cidade:</label>
+                <select id="cidade" name="cidade">
+                    <option value="">Selecione uma cidade</option>
+                    <option value="sao-paulo">São Paulo</option>
+                    <option value="santos">Santos</option>
+                    <option value="campinas">Campinas</option>
+                    <option value="outra">Outra</option>
+                </select>
+
+                <label for="mensagem2">Mensagem:</label>
+                <textarea id="mensagem2" name="mensagem" rows="4"></textarea>
+
+                <button type="submit">Enviar cadastro</button>
+            </form>
+        </section>
+
+        <!-- ATIVIDADE 3 - MATERIAL 4-33 -->
+        <section>
+            <h2>Atividade 3 - Formulário simples</h2>
+
+            <form>
+                <label for="nome3">Nome:</label>
+                <input type="text" id="nome3" name="nome" required>
+
+                <label for="email3">E-mail:</label>
+                <input type="email" id="email3" name="email" required>
+
+                <label for="mensagem3">Mensagem:</label>
+                <textarea id="mensagem3" name="mensagem" rows="4"></textarea>
+
+                <button type="submit">Enviar mensagem</button>
+            </form>
+        </section>
+
+        <!-- ATIVIDADE 4 - MATERIAL 4-46 -->
+        <section id="atividade4">
+            <h2>Atividade 4 - Site de viagens</h2>
+            <p>Exemplo de site com três páginas, navegação, imagens, listas e formulário.</p>
+
+            <nav aria-label="Navegação do site de viagens">
+                <a href="#pagina-inicio">Início</a>
+                <a href="#pagina-destinos">Destinos</a>
+                <a href="#pagina-contato">Contato</a>
+            </nav>
+
+            <!-- PÁGINA 1 -->
+            <div class="pagina" id="pagina-inicio">
+                <h3>Página 1 - Início</h3>
+                <p>Bem-vindo ao nosso site de <strong>viagens</strong>! Aqui você encontra ideias para conhecer lugares incríveis.</p>
+                <p>Viajar é uma ótima oportunidade para aprender, descansar e conhecer novas culturas. Planeje sua próxima aventura com <em>organização e segurança</em>.</p>
+
+                <h4>Por que viajar?</h4>
+                <ul>
+                    <li>Conhecer novos lugares.</li>
+                    <li>Experimentar comidas diferentes.</li>
+                    <li>Aprender sobre outras culturas.</li>
+                </ul>
+
+                <p>Veja também os <a href="#pagina-destinos">destinos sugeridos</a>.</p>
+            </div>
+
+            <!-- PÁGINA 2 -->
+            <div class="pagina" id="pagina-destinos">
+                <h3>Página 2 - Destinos</h3>
+                <p>Confira quatro imagens de lugares para conhecer.</p>
+
+                <div class="imagens">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+                         alt="Praia de areia clara e mar azul">
+
+                    <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80"
+                         alt="Cidade com prédios iluminados">
+
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
+                         alt="Montanhas cercadas pela natureza">
+
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"
+                         alt="Montanha sob um céu estrelado">
+                </div>
+
+                <h4>Como planejar uma viagem</h4>
+                <ol>
+                    <li>Escolher o destino.</li>
+                    <li>Definir o orçamento.</li>
+                    <li>Pesquisar transporte e hospedagem.</li>
+                    <li>Organizar o roteiro.</li>
+                </ol>
+
+                <p>Para mais ideias, visite o site do <a href="https://www.gov.br/turismo/pt-br" target="_blank" rel="noopener noreferrer">Ministério do Turismo</a>.</p>
+            </div>
+
+            <!-- PÁGINA 3 -->
+            <div class="pagina" id="pagina-contato">
+                <h3>Página 3 - Contato</h3>
+                <p>Preencha o formulário para enviar uma mensagem sobre sua próxima viagem.</p>
+
+                <form>
+                    <label for="nome4">Nome:</label>
+                    <input type="text" id="nome4" name="nome" required>
+
+                    <label for="email4">E-mail:</label>
+                    <input type="email" id="email4" name="email" required>
+
+                    <label for="destino">Destino de interesse:</label>
+                    <select id="destino" name="destino">
+                        <option value="">Selecione</option>
+                        <option value="praia">Praia</option>
+                        <option value="cidade">Cidade</option>
+                        <option value="montanha">Montanha</option>
+                    </select>
+
+                    <label for="mensagem4">Mensagem:</label>
+                    <textarea id="mensagem4" name="mensagem" rows="4"></textarea>
+
+                    <button type="submit">Enviar contato</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Atividades HTML. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
+```
